@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Amiri:ital,wght@0,400;0,700;1,400&family=Scheherazade+New:wght@400;700&family=Katibeh&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Lateef&family=Aref+Ruqaa&display=swap');
+
+@font-face {
+  font-family: 'surah-font';
+  src: url('https://static-cdn.tarteel.ai/qul/fonts/surah-names/v4/surah-name-v4.ttf') format('truetype');
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Noorehuda';
+  src: url('/fonts/noorehuda.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KFGQPC Uthmanic Script HAFS';
+  src: url('https://cdn.jsdelivr.net/gh/quranwbw/qpc-fonts@master/KFGQPC_Uthmanic_Script_HAFS_Regular.ttf') format('truetype'),
+       url('/fonts/KFGQPCUthmanicScriptHAFS.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UthmaniQuran';
+  src: url('/fonts/KFGQPCUthmanicScriptHAFS.otf') format('opentype');
+  font-display: swap;
+}
+
+/* Quran.com V4 API Tajweed Rules */
+rule.madda_necessary, rule.madda_permissible, rule.madda_normal, rule.madda_obligatory { color: #D32F2F; }
+rule.ghunnah, rule.idgham_ghunnah { color: #F57C00; }
+rule.ikhfa, rule.ikhfa_shafawi { color: #1976D2; }
+rule.qalqalah { color: #9C27B0; }
+rule.idgham_without_ghunnah { color: #757575; }
+rule.idgham_mutajanisayn, rule.idgham_mutaqaribayn { color: #2E7D32; }
+rule.iqlab { color: #9C27B0; }
+
+
+
+
+  :root {
+    --background: 40 30% 96%;
+    --foreground: 20 10% 15%;
+
+    --card: 36 30% 98%;
+    --card-foreground: 20 10% 15%;
+
+    --popover: 36 30% 98%;
+    --popover-foreground: 20 10% 15%;
+
+    --primary: 348 60% 32%;
+    --primary-foreground: 36 33% 96%;
+
+    --secondary: 36 25% 90%;
+    --secondary-foreground: 20 10% 25%;
+
+    --muted: 36 20% 92%;
+    --muted-foreground: 20 8% 50%;
+
+    --accent: 38 50% 85%;
+    --accent-foreground: 20 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 36 20% 88%;
+    --input: 36 20% 88%;
+    --ring: 348 60% 32%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 36 25% 94%;
+    --sidebar-foreground: 20 10% 25%;
+    --sidebar-primary: 348 60% 32%;
+    --sidebar-primary-foreground: 36 33% 96%;
+    --sidebar-accent: 36 25% 90%;
+    --sidebar-accent-foreground: 20 10% 25%;
+    --sidebar-border: 36 20% 88%;
+    --sidebar-ring: 348 60% 32%;
+
+    --gold: 38 70% 55%;
+    --gold-light: 38 60% 80%;
+    --maroon: 348 60% 32%;
+    --maroon-light: 348 40% 45%;
+    --beige-warm: 36 33% 96%;
+    --explained: 140 40% 92%;
+    --explained-border: 140 35% 75%;
+
+    --font-arabic: 'Noorehuda', 'Amiri', 'Traditional Arabic', serif;
+    --font-quran: 'Calibri', 'Katibeh', 'Scheherazade New', serif;
+    --font-display: 'Newsreader', 'Fraunces', Georgia, serif;
+    --font-body: 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  .dark {
+    --background: 20 15% 10%;
+    --foreground: 36 20% 90%;
+
+    --card: 20 15% 13%;
+    --card-foreground: 36 20% 90%;
+
+    --popover: 20 15% 13%;
+    --popover-foreground: 36 20% 90%;
+
+    --primary: 348 50% 50%;
+    --primary-foreground: 36 20% 95%;
+
+    --secondary: 20 12% 18%;
+    --secondary-foreground: 36 20% 85%;
+
+    --muted: 20 10% 18%;
+    --muted-foreground: 36 15% 55%;
+
+    --accent: 38 30% 25%;
+    --accent-foreground: 36 20% 90%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 20 10% 20%;
+    --input: 20 10% 20%;
+    --ring: 348 50% 50%;
+
+    --sidebar-background: 20 15% 8%;
+    --sidebar-foreground: 36 20% 85%;
+    --sidebar-primary: 348 50% 50%;
+    --sidebar-primary-foreground: 36 20% 95%;
+    --sidebar-accent: 20 12% 18%;
+    --sidebar-accent-foreground: 36 20% 85%;
+    --sidebar-border: 20 10% 20%;
+    --sidebar-ring: 348 50% 50%;
+
+    --gold: 38 60% 45%;
+    --gold-light: 38 40% 30%;
+    --maroon: 348 50% 50%;
+    --maroon-light: 348 40% 60%;
+    --beige-warm: 20 15% 10%;
+    --explained: 140 25% 15%;
+    --explained-border: 140 25% 30%;
+  }
+
+  html {
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-body);
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: clip;
+    width: 100%;
+  }
+
+  .arabic-text {
+    font-family: var(--font-arabic);
+    direction: rtl;
+    line-height: 2.2;
+  }
+
+  .text-align-last-center {
+    text-align-last: center;
+  }
+
+  .bismillah-text {
+    font-family: var(--font-quran);
+    direction: rtl;
+    line-height: 1;
+    font-weight: 400;
+    color: hsl(var(--foreground));
+  }
+
+  .surah-calligraphy {
+    font-family: 'surah-font' !important;
+    font-size: 65px;
+    color: hsl(var(--foreground));
+    display: block;
+    height: 65px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-variant-ligatures: discretionary-ligatures;
+    -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+    font-feature-settings: "liga" 1, "dlig" 1;
+    line-height: 1;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    /* Newsreader doesn't use SOFT/WONK variables from Fraunces, but supports optical sizing */
+    font-optical-sizing: auto;
+  }
+
+  .surah-card {
+    background-color: hsl(var(--card));
+    border-radius: 1rem;
+    border: 1px solid hsl(var(--border));
+    padding: 1rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+
+
+
+  .verse-card {
+    background-color: hsl(var(--card));
+    border-radius: 1rem;
+    border: 1px solid hsl(var(--border));
+    padding: 1.25rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+
+
+  .divider-label {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .filter-chip {
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    cursor: pointer;
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+  }
+
+  .filter-chip-active {
+    padding: 0.375rem 0.875rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    cursor: pointer;
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .gold-accent {
+    color: hsl(var(--gold));
+  }
+
+  .islamic-pattern-bg {
+    background-image: radial-gradient(circle at 20% 50%, hsl(var(--gold-light) / 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, hsl(var(--primary) / 0.05) 0%, transparent 50%);
+  }
+
+  /* Hide native scrollbar — custom draggable handle used instead */
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  * {
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE/Edge */
+  }
+
+
+
+  /* Utility to hide scrollbar while keeping it draggable if needed (for specific elements) */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .font-quran {
+    font-family: var(--font-quran);
+  }
+
+  /* Study Callouts */
+  .callout-block {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border-left-width: 6px;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  }
+  .callout-linguistic {
+    background-color: rgb(245 158 11 / 0.05);
+    border-color: rgb(245 158 11 / 0.3);
+    color: rgb(120 53 15);
+  }
+  .dark .callout-linguistic {
+    color: rgb(253 230 138 / 0.9);
+  }
+  .callout-context {
+    background-color: rgb(99 102 241 / 0.05);
+    border-color: rgb(99 102 241 / 0.3);
+    color: rgb(49 46 129);
+  }
+  .dark .callout-context {
+    color: rgb(199 210 254 / 0.9);
+  }
+  .callout-tadabbur {
+    background-color: rgb(16 185 129 / 0.05);
+    border-color: rgb(16 185 129 / 0.3);
+    color: rgb(6 78 59);
+  }
+  .dark .callout-tadabbur {
+    color: rgb(167 243 208 / 0.9);
+  }
+  .callout-action {
+    background-color: rgb(244 63 94 / 0.05);
+    border-color: rgb(244 63 94 / 0.3);
+    color: rgb(136 19 55);
+  }
+  .dark .callout-action {
+    color: rgb(254 205 211 / 0.9);
+  }
+
+@media print {
+  html, body {
+    background-color: white !important;
+    color: #111827 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  @page {
+    size: a4;
+    margin: 20mm;
+  }
+  .pdf-root {
+    font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  }
+  .page-break-avoid {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+  .page-break-before {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+}
