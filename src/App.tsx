@@ -27,6 +27,13 @@ import WordDetailsPage from "@/pages/WordDetailsPage";
 import NotFound from "@/pages/NotFound";
 import ScrollToTop from "@/components/ScrollToTop";
 
+// Admin
+import AdminLogin from "@/pages/admin/AdminLogin";
+import AdminDashboard from "@/pages/admin/AdminDashboard";
+import TranslationEditor from "@/pages/admin/TranslationEditor";
+import DiscoverEditor from "@/pages/admin/DiscoverEditor";
+import AdminRoute from "@/components/admin/AdminRoute";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -37,6 +44,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
+          {/* Public Routes */}
           <Route path="/" element={<SurahListPage />} />
           <Route path="/surah/:number" element={<SurahReadingPage />} />
           <Route path="/saved" element={<SavedPage />} />
@@ -56,6 +64,15 @@ const App = () => (
           <Route path="/help" element={<HelpSupportPage />} />
           <Route path="/tajweed-guide" element={<TajweedGuidePage />} />
           <Route path="/word-details" element={<WordDetailsPage />} />
+
+          {/* Admin Routes */}
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
+          <Route path="/admin/translations" element={<AdminRoute><TranslationEditor /></AdminRoute>} />
+          <Route path="/admin/duas" element={<AdminRoute><DiscoverEditor type="duas" /></AdminRoute>} />
+          <Route path="/admin/topics" element={<AdminRoute><DiscoverEditor type="topics" /></AdminRoute>} />
+          <Route path="/admin/shane-nuzul" element={<AdminRoute><DiscoverEditor type="shane-nuzul" /></AdminRoute>} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
         <BottomNav />
